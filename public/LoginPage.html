@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- Add Bootstrap CSS CDN link -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="1.style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <h4 style="font-family: 'Julius Sans One'; display: inline-block;">Parago</h4>
+                    <span style="display: inline-block; margin-left: 5px; font-size: 10px;" class="badge rounded-pill text-bg-light">ver 1.01</span>          
+                </div>   
+                <br>             
+                <h2 class="text-center" style="font-family: 'Julius Sans One';">Login</h2>
+                <form action="/login" method="POST">              
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>
+                            <input type="checkbox" name="remember"> Remember me ?
+                        </label>
+                    </div>                    
+                    <div class="mb-3 text-center d-grid gap-2">
+                        <button type="submit" class="btn btn-outline-dark btn-bg">Login</button>
+                    </div>
+                    <div class="mb-3"></div>
+                    <p>Don't have an account ? <a href="RegisterPage.html">Register</a></p>
+                </form>                
+            </div>
+        </div>
+    </div>
+    <!-- Add Bootstrap JS CDN link (optional, for Bootstrap JavaScript components) -->
+    <script src="./js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
