@@ -18,3 +18,57 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+.inner-container
+{
+    background-color: #33fc8a;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+#move
+{
+    position: absolute; top: 10px;
+}
+
+.btn-outline-add {
+    color: black;
+    background-color: #98c5ff;
+    border-color:black;
+  }
+.btn-outline-add:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+.selected
+{
+font: 14px/2.3em trebuchet,arial;
+color: rgb(255, 255, 255);
+text-align: center;
+text-decoration: none;
+display: block;
+padding: 0 5px;
+margin: 3px auto 5px;
+background: #0767ed  repeat-x bottom;
+border-radius: 15px; /* Creates rounded edges */
+}
+
+.selected:hover
+{
+    color: white;
+}
+
+
+.table
+{
+    background-color:#ffffff;
+    border-color: black;
+}
+
+.table th
+{
+    background-color:#a6dcf7;
+}
+  
