@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Add Bootstrap CSS CDN link -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Add your custom CSS here -->
+    <link rel="stylesheet" href="2.style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="navbar-brand">
+                    <div style="display: inline-block; font-family: 'Julius Sans One';">
+                        Parago
+                        <span style="font-size: 8px;" class="badge rounded-pill text-bg-light">ver 1.01</span>
+                   </div>
+                   </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/homepage">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Reward</a>
+                        </li>
+                    </ul>                  
+                </div>
+                <!-- Add account management dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" onclick="logout()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </li>
+                           
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mt-1">
+            <h2>Task Dashboard</h2>        
+        </section>
+        <section class="container mt-2">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md">
+            <button type="button" class="btn btn-outline-dark btn-bg custom-button"  data-toggle="modal" data-target="#assignModal">Assign</button>
+        </div>
+        <br>
+        <br>
+        <div class="table-container">
+            <table class="table table-bordered" id="adminTable">
+              <thead>
+                  <tr>
+                      <th scope="col">TaskId</th>
+                      <th scope="col">Task Name</th>
+                      <th scope="col">Task Description</th>
+                      <th scope="col">Assigned To</th>
+                      <th scope="col">Start Time</th>
+                      <th scope="col">Due Date</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Actions</th>
+                      <!-- Add more headers for other columns if needed -->
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Data rows will be populated here -->
+              </tbody>
+          </table>
+          </div>
+          </table>
+        </section>
+        <!-- Add more sections and content as needed -->
+
+    </main>
+
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2023 Parago</p>
+    </footer>
+    
+
+
+    
+    <!-- Add Bootstrap JS CDN link (optional, for Bootstrap JavaScript components) -->
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="ELoginAction.js"></script>
+</body>
+</html>
