@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    
+   
+    <link rel="stylesheet" href="2.style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="navbar-brand">
+                    <div style="display: inline-block; font-family: 'Julius Sans One';">
+                        Parago
+                        <span style="font-size: 8px;" class="badge rounded-pill text-bg-light">Employee</span>
+                   </div>
+                   </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/etask">Home</a>
+                        </li>
+                    </ul>                  
+                </div>
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle"></i> <span id="welcomeEmployee"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href='/forgotpassword2'>
+                            <i class="fa fa-eye"></i> Reset Password
+                        </a>
+                        <a class="dropdown-item" onclick="logoutEmp()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </li>
+                           
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container mt-1">
+            <h2>Task Dashboard</h2>        
+        </section>
+        <section class="container mt-2">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="searchInput_emp">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="table table-bordered" id="emp_Table">
+              <thead>
+                  <tr>
+                      <th scope="col">TaskId </th>
+                      <th scope="col">Task Name </th>
+                      <th scope="col">Task Description </th>
+                      <th scope="col">Created Date </th>
+                      <th scope="col">Due Date </th>
+                      <th scope="col">Status </th>
+                      <th scope="col">Actions</th>
+                     
+                  </tr>
+              </thead>
+              <tbody>
+                 
+              </tbody>
+          </table>
+          </div>
+          </table>
+        </section>
+       
+
+    </main>
+
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2023 Parago</p>
+    </footer>
+    <div class="modal fade" id="confirmAcceptModalEmp" tabindex="-1" role="dialog" aria-labelledby="confirmCompleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmAcceptModalLabel"  style="font-family: 'Julius Sans One';">Confirm Task Completion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure to accept this task ?
+                </div>
+                <div class="modal-footer">
+    
+                    <button type="button" class="btn btn-outline-success" id="confirmAcceptButtonStaff">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirmCompleteModalEmp" tabindex="-1" role="dialog" aria-labelledby="confirmCompleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmCompleteModalLabel"  style="font-family: 'Julius Sans One';">Confirm Task Completion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure this task is completed ?
+                </div>
+                <div class="modal-footer"> 
+                    <button type="button" class="btn btn-outline-success" id="confirmCompleteButtonEmp">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="reviewModalEmp" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabelEmp" style="font-family: 'Julius Sans One';">Comment Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="reviewListEmp" class="list-group">
+                   
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </di>
+    
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="ELoginAction.js"></script>
+    <script src="empTask.js"></script>
+</body>
+</html>

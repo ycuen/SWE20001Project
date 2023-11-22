@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+
+   
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    
+  
+    <link rel="stylesheet" href="1.style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="text-center">
+                    <h4 style="font-family: 'Julius Sans One'; display: inline-block;">Parago</h4>
+                    <span style="display: inline-block; margin-left: -2px; font-size: 10px;" class="badge rounded-pill text-bg-dark">Admin</span>          
+                </div>   
+                <br>             
+                <h2 class="text-center" style="font-family: 'Julius Sans One';">Login</h2>
+                <form id="adminloginForm" action="/adminlogin" method="POST">             
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="admin_username" name="admin_username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="admin_password" name="admin_password" placeholder="Enter your password" required>
+                    </div>               
+                    <div class="mb-3 text-center d-grid gap-2">
+                        <button type="submit" class="btn btn-outline-dark btn-bg">Login</button>
+                    </div>
+                </form>                
+            </div>
+        </div>
+    </div>
+
+  <div id="loadingSpinner" class="text-center d-none" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p>Loading...</p>
+</div>
+
+    
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="adminLogin.js"></script>
+</body>
+</html>

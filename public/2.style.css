@@ -1,0 +1,43 @@
+body {
+    background-color: #f8f8f8;
+    font-family: 'Helveltica Neue';        
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+   
+}
+@font-face {
+    font-family: 'Julius Sans One';
+    src: url('JuliusSansOne-Regular.woff2') format('woff2'),
+    url('JuliusSansOne-Regular.woff') format('woff');
+  
+    font-weight: normal;
+    font-style: normal;
+}
+.assign-button {
+    width: 200px; 
+    float:right;
+}
+.assign-empbutton {
+    width: 200px; 
+    float:right;
+}
+.create-button {
+    width: 200px; 
+    float:right;
+}
+.create-ebutton {
+    width: 200px; 
+    float:right;
+}
+.table-container {
+    max-height: 500px;
+    overflow-y: auto; 
+}
+
+
+
